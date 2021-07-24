@@ -19,6 +19,24 @@
     when: ansible_distribution == "Ubuntu"
 
 
+- hosts: workstations
+  become: true
+  tasks:
+
+  - name: install unzip
+    package:
+      name: unzip
+
+  - name: install terraform
+    unarchive:
+      src: https://releases.hasicorp.com/terraform/0.12/28/terraform_0.12.28_linux_amd64.zip
+      dest: /usr/local/bin
+      remoet_src: yes
+      mode: 0755
+      owner: root
+      group: root
+
+
 - hosts: web_servers
   become: true
   tasks:
@@ -50,6 +68,7 @@
       group: root
       mode: 0644    
 
+
 - hosts: db_servers
   become: true
   tasks:
@@ -67,6 +86,7 @@
       name: mariadb-server
       state: latest
     when: ansible_distribution == "Ubuntu"
+
 
 - hosts: file_servers
   become: true
