@@ -1,4 +1,4 @@
 [Ubuntu]
-192.168.0.52 apache_package=apache2 php_package=libapache2-mod-php
-192.168.0.234 apache_package=apache2 php_package=libapache2-mod-php
-192.168.0.115 apache_package=apache2 php_package=libapache2-mod-php
+192.168.8.137 apache_package=apache2 php_package=libapache2-mod-php
+192.168.8.138 apache_package=apache2 php_package=libapache2-mod-php
+192.168.8.135 apache_package=apache2 php_package=libapache2-mod-php
